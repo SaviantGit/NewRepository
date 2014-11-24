@@ -9,8 +9,8 @@ namespace DAL
     public class DataAccessLayer
     {
 
-        public AddStudent()
-       tbl_Students 
+	   // public AddStudent()
+	   //tbl_Students 
 
 
     }
