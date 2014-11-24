@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Mvc4ApplicationDemo.Models.tbl_Students>
+
+@{
+    ViewBag.Title = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sudents</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.studentFname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.studentlName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qualification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.experience)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.studentFname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.studentlName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qualification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.experience)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

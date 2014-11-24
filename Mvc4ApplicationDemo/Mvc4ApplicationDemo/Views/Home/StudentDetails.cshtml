@@ -1,0 +1,58 @@
+﻿@model Mvc4ApplicationDemo.Models.tbl_Students
+
+@{
+    ViewBag.Title = "StudentDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>StudentDetails</h2>
+
+<fieldset>
+    <legend>tbl_Students</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.studentFname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.studentFname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.studentlName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.studentlName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.qualification)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.qualification)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Skill)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Skill)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.experience)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.experience)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
